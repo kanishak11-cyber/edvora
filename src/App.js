@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Main from './components/Main';
+
+
+
 
 function App() {
+  const [productListData, setProductListData] = useState([]);
+useEffect(() => {
+  const products = async () => {
+    const response = await fetch('https://api.myjson.com/bins/1hj7w5');
+    const data = await response.json();
+    setProductListData(data.products);
+  };
+  products();
+}, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#292929] h-full text-white">
+      {/* <ProductList /> */}
+      <Main/>
+     
     </div>
   );
 }
