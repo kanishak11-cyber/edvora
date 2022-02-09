@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 
 const Main = () => {
   return (
-    <div className=" flex flex-row flex-1 p-9 items-baseline ">
+    <div className=" flex flex-row flex-1 p-9 items-baseline   ">
       <div className=" ">
         <Filter />
       </div>
@@ -17,13 +17,15 @@ const Main = () => {
           <h1 className="opacity-50 md:text-2xl font-medium">Products</h1>
         </div>
         <div className="md:mt-5">
-          <div className="   ">
-            <ProductList className=" " />
+          <div className="  overflow-x-scroll list ">
+            <ProductList className=" text-xl" />
           </div>
           <div className=" ">
             <ProductList className=" " />
           </div>
-         
+          {/* <div className=" ">
+            <ProductList className=" " />
+          </div> */}
         </div>
       </div>
     </div>

@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
   
+
+
+.list{
+    /* cursor:pointer; */
+    display:flex;
+    overflow: scroll;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    
+    
+}
+.he1{
+    /* font-size: 20px; */
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    /* font-weight: bold; */
+    width:fit-content;
+    
+    
+}
+.fl{
+    width:70vw;
+    margin-right:10vw;
+
+   
+    
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}

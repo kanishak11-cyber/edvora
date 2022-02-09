@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react";
+
 const Filter = () => {
+  const [productData, setProductData] = useState([]);
+  
+
+  const getProducts = async () => {
+    const response = await fetch("https://assessment-edvora.herokuapp.com/");
+    console.log(response);
+    setProductData(await response.json());
+    // console.log(data);
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <div className="bg-black rounded-xl ">
       {/* filter */}
@@ -14,19 +29,28 @@ const Filter = () => {
             <div className="md:my-3 my-1">
               <select className="bg-[#292929] md:py-2 md:px-7 px-3 py-1 text-xs md:text-lg rounded-md w-full">
                 <option>Products</option>
-                <option>All</option>
+                {productData.length > 0 &&
+                  productData.map((curElement) => (
+                    <option>{curElement.product_name}</option>
+                  ))}
               </select>
             </div>
             <div className="md:my-3 my-1">
               <select className="bg-[#292929] md:py-2 md:px-7 px-3 py-1 text-xs md:text-lg rounded-md w-full">
                 <option>City</option>
-                <option>All</option>
+                {productData.length > 0 &&
+                  productData.map((curElement) => (
+                    <option>{curElement.address.city}</option>
+                  ))}
               </select>
             </div>
             <div className="md:my-3 my-1">
               <select className="bg-[#292929] md:py-2 md:px-7 px-3 py-1 text-xs md:text-lg rounded-md w-full">
                 <option>State</option>
-                <option>All</option>
+                {productData.length > 0 &&
+                  productData.map((curElement) => (
+                    <option>{curElement.address.state}</option>
+                  ))}
               </select>
             </div>
           </form>
