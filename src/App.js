@@ -1,8 +1,7 @@
 import "./App.css";
 import Filter from "./components/Filter";
-import Main from "./components/Main";
 import ProductList from "./components/ProductList";
-import ScrollContainer from 'react-indiana-drag-scroll'
+
 function App() {
   return (
     <div className="bg-[#292929] overflow-hidden text-white">
@@ -27,9 +26,9 @@ function App() {
             </div>
 
             <div className="md:mt-5 scroll-smooth">
-            <ScrollContainer>
+       
                 <ProductList />
-              </ScrollContainer>
+          
             </div>
             <div className="border-b">
               <h1 className="mt-5 font-normal md:text-xl text-sm pb-4">
@@ -37,9 +36,9 @@ function App() {
               </h1>
             </div>
             <div className="md:mt-5 scroll-smooth">
-              <ScrollContainer>
+             
                 <ProductList />
-              </ScrollContainer>
+              
               
             </div>
           </div>

@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 // import instance from "../axios";
 const Product = () => {
   const [productData, setProductData] = useState([]);
-
+  
   const getProducts = async () => {
     const response = await fetch("https://assessment-edvora.herokuapp.com/");
+    
     console.log(response);
     setProductData(await response.json());
     // console.log(data);
@@ -13,11 +14,16 @@ const Product = () => {
   useEffect(() => {
     getProducts();
   }, []);
+ 
   return (
     <div className=" flex md:flex-row flex-col relative  ">
+     
       <>
         <div className=" flex md:flex-row flex-col ">
-          {productData.length > 0 &&
+          {
+
+
+          productData.length > 0 &&
             productData.map((curElement) => {
               return (
                 <div className=" h-auto justify-center  items-center">
@@ -59,7 +65,7 @@ const Product = () => {
                         </div>
                         <div className="text-xs opacity-50">
                           <h1 className="p-1  ">
-                            {curElement.date}
+                            Date: {curElement.date}
                           </h1>
                         </div>
                       </div>
