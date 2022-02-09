@@ -35,10 +35,10 @@ const Product = () => {
                             src={curElement.image}
                             alt="logo"
                             className=" rounded-lg "
-                            object-fit="fill"
+                            
                           />
                         </div>
-                        <div className="p-3 text-sm opacity-50">
+                        <div className="p-3 text-sm opacity-50 w-5/6 w-48">
                         <h1>{curElement.address.city}</h1>
                           <h1 className="text-sm opacity-50">
                             {curElement.address.state},{" "}
@@ -47,10 +47,11 @@ const Product = () => {
                         </div>
                       </div>
                       <div className="grid grid-flow-row content-evenly  grid-flex p-3 ">
-                        <div className=" text-xl max-w-5xl text-ellipsis overflow-hidden flex-nowrap " >
-                          <h1 className="p-1  he1">
-                            {curElement.product_name}
-                          </h1>
+                        <div className=" text-xl max-w-5xl w-11/13 w-48 text-ellipsis overflow-hidden flex-nowrap " >
+                         
+                          {/* <h1 className="p-1  text-justify w-5/7"> */}
+                         <p className="">{curElement.product_name}</p>   
+                          {/* </h1> */}
                         </div>
                         <div className="p-1 text-sm">
                           <h1 className="opacity-50">

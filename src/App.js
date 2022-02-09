@@ -31,7 +31,7 @@ function App() {
           
             </div>
             <div className="border-b">
-              <h1 className="mt-5 font-normal md:text-xl text-sm pb-4">
+              <h1 className="mt-5 font-normal md:text-xl text-sm ">
                 Product Name{" "}
               </h1>
             </div>
