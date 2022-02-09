@@ -3,30 +3,17 @@ import Product from "./Product";
 
 const ProductList = () => {
   return (
-    <div className=" flex-col hel">
+    <div className="  ">
       <div className="border-b">
-        <h1 className=" font-normal text-xl pb-4">Product Name </h1>
+        <h1 className=" font-normal md:text-xl text-sm pb-4">Product Name </h1>
       </div>
-      {/* <Product/> */}
-      <div className="flex rounded-xl mt-5  flex-row  bg-black p-5 ">
-        <span className="m-2 rounded-xl ">
+      
+      <div className="flex rounded-xl md:mt-3 mt-1 md:flex-row flex-col  bg-black ">
+        <div className=" rounded-xl ">
           <Product />
-        </span>
-        <span className="m-2 rounded-xl ">
-          <Product />
-        </span>
-        <span className="m-2 rounded-xl ">
-          <Product />
-        </span>
-        <span className="m-2 rounded-xl ">
-          <Product />
-        </span>
-        <span className="m-2 rounded-xl ">
-          <Product />
-        </span>
-        <span className="m-2 rounded-xl ">
-          <Product />
-        </span>
+          
+        </div>
+       
       </div>
       
     </div>

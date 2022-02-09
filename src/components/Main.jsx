@@ -4,25 +4,26 @@ import ProductList from "./ProductList";
 
 const Main = () => {
   return (
-    <div className=" flex flex-row flex-1 p-9 justify-between ">
-      <div className="xs:hidden xs:w-20">
+    <div className=" flex flex-row flex-1 p-9 items-baseline ">
+      <div className=" ">
         <Filter />
       </div>
 
-      <div className="px-5">
-        <div className="">
-          <h1 className="font-bold text-4xl opacity-90">Edvora</h1>
+      <div className="md:px-5 px-2">
+        <div className="opacity-90">
+          <h1 className="font-bold md:text-4xl ">Edvora</h1>
         </div>
-        <div className="mt-5">
-          <h1 className="opacity-50 text-2xl font-medium">Products</h1>
+        <div className="md:mt-5">
+          <h1 className="opacity-50 md:text-2xl font-medium">Products</h1>
         </div>
-        <div className=" mt-5">
-          <span className="mt-3">
-            <ProductList className="" />
-          </span>
-          <span className="mt-3">
-            <ProductList className="" />
-          </span>
+        <div className="md:mt-5">
+          <div className="   ">
+            <ProductList className=" " />
+          </div>
+          <div className=" ">
+            <ProductList className=" " />
+          </div>
+         
         </div>
       </div>
     </div>
